@@ -41,4 +41,8 @@ void quick_sort(int *array, size_t size);
 /* Task-100 Advanced_1 */
 void shell_sort(int *array, size_t size);
 
+/* Task-101 Advanced_2 */
+void cocktail_sort_list(listint_t **list);
+
+
 #endif /* SORT_H */
