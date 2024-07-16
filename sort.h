@@ -2,7 +2,7 @@
 #define SORT_H
 
 #include <stdlib.h>
-
+#include <stdio.h>
 
 /* Structs files */
 /**
@@ -46,5 +46,8 @@ void cocktail_sort_list(listint_t **list);
 
 /* Task 102 Advanced_3*/
 void counting_sort(int *array, size_t size);
+
+/* Task 103 Advanced_4 */
+void merge_sort(int *array, size_t size);
 
 #endif /* SORT_H */
