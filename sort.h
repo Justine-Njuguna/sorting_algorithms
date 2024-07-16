@@ -50,4 +50,7 @@ void counting_sort(int *array, size_t size);
 /* Task 103 Advanced_4 */
 void merge_sort(int *array, size_t size);
 
+/* Task 104 Advanced_5 */
+void heap_sort(int *array, size_t size);
+
 #endif /* SORT_H */
