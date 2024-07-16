@@ -44,5 +44,7 @@ void shell_sort(int *array, size_t size);
 /* Task-101 Advanced_2 */
 void cocktail_sort_list(listint_t **list);
 
+/* Task 102 Advanced_3*/
+void counting_sort(int *array, size_t size);
 
 #endif /* SORT_H */

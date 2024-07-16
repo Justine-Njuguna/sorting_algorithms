@@ -90,17 +90,46 @@ int backward_pass(listint_t **list, listint_t **start, listint_t *end)
  */
 void cocktail_sort_list(listint_t **list)
 {
-	int swapped;
+	int swapped = 1;
 	listint_t *start = *list;
 	listint_t *end = NULL;
 
-	if (!list || !*list)
+	if ((list == NULL || *list == NULL || (*list)->next == NULL))
 		return;
 
-	do {
-		swapped = forward_pass(list, start, &end);
+	while (swapped)
+	{
+		swapped = 0;
+
+		/* Forward Pass */
+		for (start = *list; start->next != end; start = start->next)
+		{
+			if (start->n > start->next->n)
+			{
+				swap_nodes(list, start, start->next);
+				print_list(*list);
+				swapped = 1;
+			}
+		}
+
+		/* If no swaps occured, list is sorted */
 		if (!swapped)
 			break;
-		swapped = backward_pass(list, &start, end);
-	} while (swapped);
+
+		/* Move pointer backwards */
+		end = start;
+
+		/* Backward pass */
+		for (start = end->prev;
+				start != NULL && start->prev != end;
+				start = start->prev)
+		{
+			if (start->n > start->next->n)
+			{
+				swap_nodes(list, start, start->next);
+				print_list(*list);
+				swapped = 1;
+			}
+		}
+	}
 }
