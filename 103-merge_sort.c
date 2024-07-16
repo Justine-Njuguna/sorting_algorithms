@@ -10,7 +10,7 @@ void merge_sort(int *array, size_t size);
  * @subarr: A subarray of an array of integers to sort.
  * @buff: A buffer to store the sorted subarray.
  * @front: The front index of the array.
- * @mid: The middle index of the array.
+ * @middle: The middle index of the array.
  * @back: The back index of the array.
  */
 void merge_subarr(int *subarr, int *buff, size_t front, size_t middle,
