@@ -38,4 +38,7 @@ void selection_sort(int *array, size_t size);
 /* Task-3 */
 void quick_sort(int *array, size_t size);
 
+/* Task-100 Advanced_1 */
+void shell_sort(int *array, size_t size);
+
 #endif /* SORT_H */
